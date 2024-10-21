@@ -1,0 +1,297 @@
+ <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   VietravelPlus
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header .logo img {
+            height: 50px;
+        }
+        .header .contact {
+            display: flex;
+            align-items: center;
+        }
+        .header .contact a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        .header .contact a i {
+            margin-right: 5px;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+        }
+        .content h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 20px 0;
+        }
+        .content p {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .info {
+            font-size: 14px;
+            color: #333;
+        }
+        .footer .social {
+            display: flex;
+            align-items: center;
+        }
+        .footer .social a {
+            margin-left: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .social a i {
+            font-size: 20px;
+        }
+        #menu{
+            display: grid;
+            grid-template-columns: auto;
+            background-color: blue;
+        }
+        #mn>ul{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            list-style-type: none;
+            justify-content: space-evenly;
+        }
+        #mn>ul>li>a{
+            text-decoration: none;
+            color: white;
+            padding: 0px;
+            display: inline-block;
+            text-align: center;
+            padding: 20px 20px;
+
+        }
+        #mn>ul>li>a:hover{
+            background-color: skyblue;
+            color: white;
+        }
+        .cha {
+    position: relative;
+}
+
+.con {
+    position: absolute;
+    display: none; /* Hidden by default */
+    grid-template-rows: auto;
+    list-style-type: none;
+    text-decoration: none;
+    width: 200px;
+    height: auto; /* Changed to auto to fit content */
+    text-align: left;
+}
+
+.cha:hover .con {
+    display: grid; /* Show on hover */
+    background-color: skyblue;
+    text-decoration: none;
+}
+
+.con a {
+    display: block; /* Make links block elements for better click area */
+    padding: 15px; /* Add padding for better spacing */
+    color: white; /* Ensure text color is visible */
+    text-decoration: none;
+}
+
+.con a:hover {
+    background-color: darkblue;
+    color: white;
+}
+        .breadcrumb {
+            padding: 10px 16px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+        }
+        .breadcrumb a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="container">
+    <div class="logo">
+     <img alt="VietravelPlus Logo" height="50" src="https://storage.googleapis.com/a1aa/image/cjc2XDg7yYKtKhGjpt7Q3bQZupISA7yejqgG5pBtR7AmsfoTA.jpg" width="150"/>
+    </div>
+    <div class="contact">
+     <a href="#">
+      <i class="fas fa-sign-in-alt">
+      </i>
+      Đăng nhập
+     </a>
+     <a href="#">
+      <i class="fas fa-phone-alt">
+      </i>
+      1900 1839
+     </a>
+    </div>
+   </div>
+  </div>
+  <div id="menu">
+    <div id="mn">
+        <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li class="cha"><a href="#">Hội viên</a>
+                        <ul class="con">
+                            <li><a href="#">Khách hàng cá nhân</a></li>
+                            <li><a href="#">Khách hàng doanh nghiệp</a></li>
+                        </ul>
+                    </li>
+                    <li class="cha"><a href="#">Win Together</a>
+                        <ul class="con">
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Ưu đãi tài chính</a></li>
+                            <li><a href="#">Ưu đãi đặc quyền</a></li>
+                        </ul>
+                    </li>
+                    <li class="cha"><a href="#">Quà tặng</a>
+                        <ul class="con">
+                            <li><a href="#">Quà tặng hội viên</a></li>
+                            <li><a href="#">Quà tặng đi tour</a></li>
+                        </ul>
+                    </li>
+                    <li class="cha"><a href="#">Bảo hiểm</a>
+                        <ul class="con">
+                            <li><a href="#">Du lịch trong nước</a></li>
+                            <li><a href="#">Du lịch ngoài nước</a></li>
+                            <li><a href="#">Tư vấn bảo hiểm</a></li>
+                        </ul>
+                    </li>
+                    <li class="cha"><a href="#">Ý kiến khách hàng</a>
+                        <ul class="con">
+                            <li><a href="#">Tư vấn</a></li>
+                            <li><a href="#">Góp ý sau tour</a></li>
+                            <li><a href="#">Góc chia sẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+   </div>
+  <div class="breadcrumb">
+   <a href="#home">
+    Trang chủ
+   </a>
+   /
+   <a href="#members">
+    Hội viên
+   </a>
+  </div>
+  </div>
+  <div class="content">
+   <h1>
+    Chương trình khách hàng thân thiết VietravelPlus
+   </h1>
+   <img alt="VietravelPlus promotional image with a woman holding balloons and various membership cards" height="400" src="https://storage.googleapis.com/a1aa/image/U7j2oGXTbexXUy2gYjuGyohcFfW0bBSmXK3Tf8gMAuudyejOB.jpg" width="1200"/>
+   <p>
+    Với mong muốn mang đến cho quý khách hàng những hành trình "Chuyên nghiệp - Cảm xúc thăng hoa - Giá trị đích thực", Vietravel chính thức ra mắt chương trình VietravelPlus. Đây là chương trình đặc biệt dành cho khách hàng thân thiết với mong muốn đem đến những giá trị tốt nhất cho khách hàng thông qua hệ thống tích điểm và sử dụng điểm.
+   </p>
+   <p>
+    ...
+   </p>
+   <p>
+    VietravelPlus, thêm điểm, thêm vui!
+   </p>
+  </div>
+  <div class="footer">
+   <div class="container">
+    <div class="info">
+     <p>
+      190 Pasteur, Phường Võ Thị Sáu, Q.3, TP HCM
+     </p>
+     <p>
+      Tel: (84.28) 3822 8898 - Fax: (84.28) 3829 9142
+     </p>
+     <p>
+      Email: info@vietravel.com
+     </p>
+     <p>
+      © CÔNG TY CỔ PHẦN DU LỊCH VÀ TIẾP THỊ GIAO THÔNG VẬN TẢI VIETRAVEL
+     </p>
+    </div>
+    <div class="social">
+     <a href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-youtube">
+      </i>
+     </a>
+     <a href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
