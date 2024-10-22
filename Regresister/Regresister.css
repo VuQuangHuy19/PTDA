@@ -1,130 +1,174 @@
-* {
+/* Menu */
+html,
+body,
+div,
+p,
+a,
+ol,
+ul,
+li,
+tbody,
+tfoot,
+thead,
+footer,
+header,
+menu,
+nav,
+section {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+body {
+  font-family: roboto condensed, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  min-width: 320px;
 }
 
-/*Banner*/
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 5%;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+strong {
+  font-weight: 700;
+}
+
+.f-right {
+  float: right;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff2d21;
+}
+
+#header #top {
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px dotted #d8d8d8;
+}
+
+#top .hotline {
+  color: #de523e;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#bot .dropdown-menu {
+  left: initial !important;
+  right: 0 !important;
+}
+
+#bot .mg-top-h {
+  margin-top: 23px;
+}
+
+.modal-title {
+  color: #de523e;
+  font-weight: 700;
+}
+
+#menu {
+  background: linear-gradient(to right, #1183f3, #11aef3);
+  height: 45px;
+}
+
+#main_menu {
+  list-style-type: none;
+  padding: 0;
+  z-index: 999;
+}
+
+#main_menu > li {
+  float: left;
+  z-index: 999;
+}
+
+#main_menu > li:last-child {
+  border-right: none;
+}
+
+#main_menu li {
   position: relative;
 }
-.logo img {
-  height: 70px;
-}
-.banner img {
-  width: 100%;
-  height: auto;
-}
-/*Menu*/
-.nav-links {
-  display: flex;
-  list-style: none;
-  font-weight: bold;
-  align-items: center;
-}
-.nav-links li {
-  margin: 0 15px;
-}
-.nav-links li > a:hover {
-  color: #0066cc;
-}
-.nav-links a {
+
+#main_menu > li > a {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
   text-decoration: none;
-  color: #333;
-  align-items: center;
-  padding: 20px;
-}
-.nav-icons {
-  display: flex;
-  align-items: center;
-}
-.menu-toggle,
-.user-icon {
-  font-size: 24px;
-  margin-left: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
+  z-index: 999;
 }
 
-/*Menu con*/
-.submenu {
-  width: 80%;
+#main_menu .sub_menu > li a {
+  display: block;
+  padding: 15px;
+  color: #fff;
+}
+
+#main_menu .sub_menu > li {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+#main_menu .sub_menu > li:last-child {
+  border-bottom: none !important;
+}
+
+#main_menu li .sub_menu {
+  position: absolute;
   display: none;
+  width: 200px;
+  background: #1182f2;
+  top: 0;
+  left: 100%;
+}
+
+#main_menu li:hover > .sub_menu {
+  display: block;
+}
+
+#main_menu > li > .sub_menu {
+  top: 45px;
   position: absolute;
-  top: 100%;
   left: 0;
-  right: 0;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: auto;
-  z-index: 1000;
-  border-radius: 10px;
-  font-size: small;
 }
-.submenu.active {
-  display: block;
+
+#main_menu :hover > .sub_menu li:hover,
+#main_menu li:hover {
+  background: #1572ce;
 }
-.submenu-content {
-  display: flex;
-  justify-content: space-between;
+
+#main_menu :hover > .sub_menu li a:hover {
+  color: #fff;
 }
-.submenu-column {
-  flex: 1;
+
+#main_menu li.active {
+  background: #1572ce;
 }
-.submenu h6 {
-  margin-bottom: 10px;
-  color: #000000;
-  font-weight: bold;
-}
-.submenu ul {
-  list-style: none;
-  padding: 0;
-}
-.submenu li {
-  margin-bottom: 5px;
-}
-.submenu a {
-  text-decoration: none;
-  color: #333;
-}
-.submenu a:hover {
-  color: #0066cc;
-}
-.submenu .see-all {
-  display: block;
-  margin-top: 10px;
-  color: #0066cc;
-}
-.close-submenu {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
+/* End Menu/*
 /* Đăng ký */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #ffffff; /* Vẫn giữ màu trắng cho form */
-  padding: 30px; /* Tăng padding để nội dung thoáng hơn */
-  border-radius: 12px; /* Bo tròn các góc hộp */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); /* Tăng độ bóng cho hộp */
-}
 
 h2 {
   color: #1e3a8a; /* Màu xanh đậm hơn cho tiêu đề */
@@ -276,4 +320,30 @@ select:focus {
 }
 .star {
   color: red;
+}
+
+/* Radio_group */
+.radio_group {
+  margin-bottom: 20px;
+}
+
+.radio_group p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.radio_group div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Adds spacing between each option */
+}
+
+.radio_group input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* Optional: Make radio buttons slightly larger */
+}
+
+.radio_group label {
+  font-size: 16px;
+  cursor: pointer;
 }
