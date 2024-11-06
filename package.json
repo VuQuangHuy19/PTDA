@@ -1,0 +1,51 @@
+{
+    "name": "project",
+    "version": "1.0.0",
+    "description": "main.js",
+    "main": "main.js",
+    "scripts": {
+        "start": "node --inspect src/main.js",
+        "watch": "node--sass -w src/ressources/scss/ -o src/public/css/",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VuQuangHuy19/PTDA.git"
+    },
+    "keywords": [
+        "PTDA",
+        "IT",
+        "baocao"
+    ],
+    "author": "QHuy",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/VuQuangHuy19/PTDA/issues"
+    },
+    "homepage": "https://github.com/VuQuangHuy19/PTDA#readme",
+    "lint-staged": {
+        "src/**/*.{js, json, scss}": "prettier  --single-quote --trailing-comma  all --tab-width 4 --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "nom test",
+            "...": "..."
+        }
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.1",
+        "express-handlebars": "^8.0.1",
+        "mssql": "^11.0.1",
+        "sequelize": "^6.37.4",
+        "tedious": "^18.6.1"
+    },
+    "devDependencies": {
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.3.3"
+    }
+}
