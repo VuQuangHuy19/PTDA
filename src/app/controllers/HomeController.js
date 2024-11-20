@@ -1,15 +1,17 @@
-const UserModel = require('../models/Test');
+const Tour = require('../models/Tours');
+const { mutipleMongooseToObject } = require('../../until/mongoose')
 
 class HomeController {
     index(req, res, next) {
-        UserModel.getAllMark()
-            .then(users => {
-                res.render('home');  // Send the data as JSON
+        Tour.find({})
+            .then(tours => {
+                res.render('home', 
+                    {
+                        tours: mutipleMongooseToObject(tours)
+                    });
             })
-            .catch(error => {
-                next(err);
-            });
+            .catch(next);
     }
 }
 
-module.exports = new HomeController;
+module.exports = new HomeController();

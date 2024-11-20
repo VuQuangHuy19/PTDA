@@ -1,36 +1,14 @@
-const express = require("express");
-const sql = require("mssql");
+const mongoose = require('mongoose');
 
-const app = express()
-
-const config = 
+ async function connect()
 {
-    server: "localhost",
-    dataBase: "QLTDL",
-    user: "huy",
-    password: "hoaQUA123!@#",
-    port: 1433,
-    options: {
-        trusttedServerCertificate: true,
-        enableArithAbort: true,
-        trustedConnection: false,
-        encrypt: false // Disable encryption
-    },
-
-};
-
-async function connect() {
-    sql.connect(config, err => {
-        if (err) {
-            console.log("connecion lost!", err);
-        }
-        console.log("Connection Successful!");
-    });
+    try {
+        await mongoose.connect('mongodb://localhost:27017/Travel');
+        console.log('Connect Successfully!')
+    } catch (error) {
+        console.log('Connect Failure!')   
+    }
 }
-
-
-
-
 
 module.exports = { connect };
 

@@ -3,7 +3,7 @@ const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
 const handlerbars = require('express-handlebars')
-const cors = require('cors')
+
 
 const route = require('./routes')
 const db = require('./config/db');
@@ -16,9 +16,8 @@ db.connect()
 const app = express()
 const port = 3000
 
-//cors
-app.use(cors());
 
+app.use(express.static(path.join(__dirname + '/public')));
 
 //http
 app.use(morgan('combined'))
@@ -34,4 +33,3 @@ route(app);
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })
-app.use(express.static(__dirname + '/public'));

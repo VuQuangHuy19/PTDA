@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel.com.vn - Trang chủ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/Regresister.css" />
+  </head>
+
+  <body>
+    <!--Menu-->
+    
+    <!--End menu-->
+    <div class="container">
+      <h2>Đăng ký hội viên</h2>
+      <div class="form-group row">
+        <label for="ho-ten">Họ tên <span class="star">(*)</span>:</label>
+        <input type="text" id="ho-ten" required />
+      </div>
+
+      <div class="form-group row">
+        <label for="ngay-sinh">Ngày sinh:</label>
+        <input type="date" id="ngay-sinh" />
+      </div>
+
+      <div class="form-group row">
+        <div class="column">
+          <label for="cmnd">CMND:</label>
+          <input type="text" id="cmnd" />
+        </div>
+        <div class="column">
+          <label for="passport">Passport:</label>
+          <input type="text" id="passport" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="column">
+          <label for="ngay-cap">Ngày cấp CMND:</label>
+          <input type="date" id="ngay-cap" />
+        </div>
+        <div class="column">
+          <label for="quoc-gia">Quốc gia</label>
+          <select id="quoc-gia">
+            <option value="Vietnam">Việt Nam</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="column">
+          <label for="tinh-tp">Tỉnh/TP</label>
+          <select id="tinh-tp">
+            <option value="">Chọn tỉnh/thành phố</option>
+          </select>
+        </div>
+        <div class="column">
+          <label for="quan-huyen">Quận/Huyện</label>
+          <select id="quan-huyen">
+            <option value="">Chọn quận/huyện</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="column">
+          <label for="dia-chi">Địa chỉ:</label>
+          <input type="text" id="dia-chi" />
+        </div>
+        <div class="column">
+          <label for="ma-gioi-thieu">Mã giới thiệu:</label>
+          <input type="text" id="ma-gioi-thieu" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="column">
+          <label for="mat-khau">Mật khẩu <span class="star">(*)</span>:</label>
+          <input type="password" id="mat-khau" required />
+        </div>
+        <div class="column">
+          <label for="nhap-lai">Nhập lại <span class="star">(*)</span>:</label>
+          <input type="password" id="nhap-lai" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="dong-y" />
+        <label for="dong-y" style="font-size: 15px"
+          >Tôi đã đọc và đồng ý các
+          <a
+            href="#"
+            id="show-terms"
+            style="color: blue; text-decoration: underline; cursor: pointer"
+            >điều khoản</a
+          ></label
+        >
+      </div>
+
+      <div id="terms" style="display: none">
+        <h3>Điều khoản sử dụng</h3>
+        <p>
+          - Hội viên đăng ký chương trình cung cấp đúng các thông tin về số điện
+          thoại, địa chỉ liên hệ, địa chỉ email của Hội viên. Khi có thay đổi,
+          Hội viên có thể tự cập nhật vào tài khoản tại VietravelPlus.com hoặc
+          liên hệ thông báo trực tiếp với nhân viên Vietravel và yêu cầu cập
+          nhật.
+        </p>
+
+        <p>
+          - Hội viên tham gia chương trình được cộng điểm Vàng và điểm Thưởng
+          sau khi sử dụng dịch vụ tại Vietravel theo hệ số cộng điểm và theo các
+          quy định về điểm thưởng khác được công bố tại từng thời điểm.
+        </p>
+
+        <p>
+          - Vietravel có quyền thay đổi các điều kiện và điều khoản của chương
+          trình Khách hàng thân thiết bất kỳ thời điểm nào có (hoặc không) báo
+          trước và sẽ công bố chính thức trên VietravelPlus.com.
+        </p>
+
+        <p>
+          - Vietravel có quyền sửa đổi cách thức của chương trình hoặc những
+          quyền lợi có được từ chương trình tại bất kỳ thời điểm nào, có (hoặc
+          không) báo trước và sẽ công bố chính thức trên VietravelPlus.com.
+        </p>
+
+        <p>
+          - Vietravel có quyền tạm ngừng hoặc chấm dứt toàn bộ chương trình
+          Khách hàng thân thiết tại bất kỳ thời điểm nào, có (hoặc không) báo
+          trước.
+        </p>
+
+        <p>
+          - Vietravel được miễn trừ chịu trách nhiệm nếu Hội viên không nhận
+          được các ưu đãi và lợi ích từ chương trình do số điện thoại, email Hội
+          viên có thay đổi mà không cập nhật vào hồ sơ hội viên hoặc do gửi ấn
+          phẩm, thư tín qua đường bưu điện đến Hội viên bị thất lạc.
+        </p>
+
+        <p>
+          - Mọi khiếu nại, yêu cầu bồi thường của Hội viên liên quan đến chương
+          trình sẽ do Vietravel giải quyết. Sự giải quyết của Vietravel có giá
+          trị áp dụng sau cùng.
+        </p>
+
+        <p>
+          - Vietravel được phép sử dụng những thông tin của Hội viên trong các
+          trường hợp: phục vụ cho việc nghiên cứu thị trường, lên kế hoạch kinh
+          doanh nhằm phục vụ Hội viên tốt hơn của Vietravel hoặc đối tác chương
+          trình, gửi phần thưởng hay các ấn phẩm đến Hội viên mà không cần sự
+          đồng ý của Hội viên hoặc các trường hợp khác được Hội viên cho phép.
+        </p>
+
+        <p>
+          - Hội viên được khuyến khích đọc kỹ và được xem như chấp nhận nội dung
+          chương trình Khách hàng thân thiết VietravelPlus trước khi đăng ký trở
+          thành Hội viên.
+        </p>
+      </div>
+    </div>
+    <button type="submit" class="submit-btn">Đăng ký</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

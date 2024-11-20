@@ -1,0 +1,349 @@
+/* Menu */
+html,
+body,
+div,
+p,
+a,
+ol,
+ul,
+li,
+tbody,
+tfoot,
+thead,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+body {
+  font-family: roboto condensed, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  min-width: 320px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.f-right {
+  float: right;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff2d21;
+}
+
+#header #top {
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px dotted #d8d8d8;
+}
+
+#top .hotline {
+  color: #de523e;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#bot .dropdown-menu {
+  left: initial !important;
+  right: 0 !important;
+}
+
+#bot .mg-top-h {
+  margin-top: 23px;
+}
+
+.modal-title {
+  color: #de523e;
+  font-weight: 700;
+}
+
+#menu {
+  background: linear-gradient(to right, #1183f3, #11aef3);
+  height: 45px;
+}
+
+#main_menu {
+  list-style-type: none;
+  padding: 0;
+  z-index: 999;
+}
+
+#main_menu > li {
+  float: left;
+  z-index: 999;
+}
+
+#main_menu > li:last-child {
+  border-right: none;
+}
+
+#main_menu li {
+  position: relative;
+}
+
+#main_menu > li > a {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-decoration: none;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
+  z-index: 999;
+}
+
+#main_menu .sub_menu > li a {
+  display: block;
+  padding: 15px;
+  color: #fff;
+}
+
+#main_menu .sub_menu > li {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+#main_menu .sub_menu > li:last-child {
+  border-bottom: none !important;
+}
+
+#main_menu li .sub_menu {
+  position: absolute;
+  display: none;
+  width: 200px;
+  background: #1182f2;
+  top: 0;
+  left: 100%;
+}
+
+#main_menu li:hover > .sub_menu {
+  display: block;
+}
+
+#main_menu > li > .sub_menu {
+  top: 45px;
+  position: absolute;
+  left: 0;
+}
+
+#main_menu :hover > .sub_menu li:hover,
+#main_menu li:hover {
+  background: #1572ce;
+}
+
+#main_menu :hover > .sub_menu li a:hover {
+  color: #fff;
+}
+
+#main_menu li.active {
+  background: #1572ce;
+}
+/* End Menu/*
+/* Đăng ký */
+
+h2 {
+  color: #1e3a8a; /* Màu xanh đậm hơn cho tiêu đề */
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px; /* Tăng kích thước tiêu đề */
+  text-transform: uppercase; /* Chữ in hoa cho tiêu đề */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ */
+}
+
+/* Căn chỉnh các form nhóm */
+.form-group {
+  margin-bottom: 20px; /* Tăng khoảng cách giữa các nhóm form */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #4b5563; /* Màu chữ tối hơn */
+  font-size: 14px; /* Kích thước chữ lớn hơn */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: calc(100% - 20px); /* Kéo dài ô nhập liệu cho tất cả các trường */
+  padding: 12px; /* Thêm padding */
+  border: 1px solid #d1d5db; /* Đường viền sáng hơn */
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng chuyển tiếp cho box-shadow */
+  background-color: #f9fafb; /* Màu nền cho ô nhập liệu */
+  font-size: 14px; /* Kích thước chữ cho ô nhập liệu */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #1e3a8a; /* Đổi màu viền khi focus */
+  outline: none; /* Xóa outline mặc định */
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.5); /* Thêm hiệu ứng bóng khi focus */
+}
+
+/* Gộp các trường Địa chỉ và Mã giới thiệu thành một hàng */
+.address-group,
+.password-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Khoảng cách giữa các trường */
+}
+
+/* Căn chỉnh chiều dài các trường */
+
+/* Căn chỉnh bố cục */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.column:first-child {
+  padding-left: 0;
+}
+
+.column:last-child {
+  padding-right: 0;
+}
+
+/* Điều khoản */
+#terms {
+  margin-top: 20px; /* Tăng khoảng cách trên cho điều khoản */
+  padding: 15px; /* Tăng padding cho điều khoản */
+  border: 1px solid #d1d5db; /* Đường viền sáng hơn */
+  border-radius: 5px;
+  background-color: #e5e7eb; /* Màu nền cho điều khoản */
+}
+
+#terms p {
+  text-align: left;
+  font-size: 15px; /* Kích thước chữ cho điều khoản */
+  line-height: 1.5; /* Tăng chiều cao dòng cho điều khoản */
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.form-group label[for="dong-y"] {
+  font-size: 12px; /* Giảm kích cỡ chữ cho điều khoản */
+  margin-left: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  color: #6b7280; /* Màu chữ cho điều khoản */
+}
+
+/* Nút Đăng ký */
+.submit-btn {
+  background-color: #4caf50; /* Màu xanh lá cây cho nút */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+  width: 150px;
+  margin: 30px auto; /* Căn giữa nút Đăng ký */
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển tiếp cho màu nền và hiệu ứng phóng to */
+}
+
+.submit-btn:hover {
+  background-color: #388e3c; /* Màu xanh đậm hơn khi hover */
+  transform: translateY(-2px); /* Hiệu ứng phóng nhẹ khi hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  #ho-ten,
+  #email,
+  #dia-chi,
+  #ma-gioi-thieu {
+    width: 100%; /* Kéo dài các ô nhập liệu để khít với độ rộng màn hình */
+  }
+
+  .address-group,
+  .password-group {
+    flex-direction: column; /* Đặt các trường thành cột trên thiết bị nhỏ */
+  }
+}
+.star {
+  color: red;
+}
+
+/* Radio_group */
+.radio_group {
+  margin-bottom: 20px;
+}
+
+.radio_group p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.radio_group div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Adds spacing between each option */
+}
+
+.radio_group input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* Optional: Make radio buttons slightly larger */
+}
+
+.radio_group label {
+  font-size: 16px;
+  cursor: pointer;
+}
