@@ -2,7 +2,7 @@ const { engine } = require('express-handlebars');
 const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
-
+const app = express()
 
 const session = require('express-session');
 
@@ -15,7 +15,7 @@ db.connect()
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());  // nếu gửi JSON data
 
-const app = express()
+
 const port = 3000
 
 
