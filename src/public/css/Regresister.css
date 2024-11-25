@@ -1,0 +1,25 @@
+
+
+
+/* Căn chỉnh form giữa header và footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Đảm bảo toàn màn hình */
+}
+
+main {
+  flex: 1; /* Đẩy form xuống giữa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

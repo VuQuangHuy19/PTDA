@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel.com.vn - Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Travel_Trang_chu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!--Menu-->
+    
+
+    <!--banner-->
+    <section class="banner">
+        <div class="searchBar">
+            <img style="heigh: 100px;" src="img/banner.webp" alt="Banner" class="img-fluid">
+        </div>
+    </section>
+
+    <!--search box-->
+    <div class="search">
+        <div class="header">
+            <div class="tabs">
+                <div class="active"><a href="#">Tour trọn gói</a></div>
+                <div><a href="#">Khách sạn</a></div>
+                <div><a href="#">Vé máy bay</a></div>
+                <div><a href="#">Combo</a></div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <input type="text" placeholder="Bạn muốn đi đâu?">
+            <input id="current-time" type="date">
+            <select>
+                <option value="">Chọn mức giá</option>
+                <option value="budget">Giá rẻ</option>
+                <option value="standard">Tiêu chuẩn</option>
+                <option value="premium">Cao cấp</option>
+            </select>
+        </div>
+    </div>
+
+    <!--tour goi y-->
+    <section class="tour-icons my-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <a href="#"><img src="img/7272.gif" alt="Tour 1" class="img-fluid"></a>
+                    <p>Tour Tết</p>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="img/caocap.webp" alt="Tour 2" class="img-fluid"></a>
+                    <p>Tour Cao cấp</p>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="img/Tiêu chuẩn.webp" alt="Tour 3" class="img-fluid"></a>
+                    <p>Tour Tiêu Chuẩn</p>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="img/Tiết kiệm.webp" alt="Tour 4" class="img-fluid"></a>
+                    <p>Tour Tiết Kiệm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-show">
+        <div class="slideshow-container">
+            <div class="slider">
+                <div class="slide"><img src="img/bn_240819_HanQuoc_BanTinhCaMuaThu_436-327.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="\img/bn_240822_Jeju_ThuVangLangMan_436-327.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="img/bn_240911_banner Chau Au_436x327.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="img/bn_240828_BANNER WEB CODE THU ONLINE.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="img/bn_241010_hongkong1_436x327px-03.jpg" alt="Image 5"></div>
+                <div class="slide"><img src="img/bn_240909_KV Thu_Web 436x327px 1.jpg" alt="Image 6"></div>
+            </div>
+        </div>
+    
+        <div class="dots">
+            <span class="dot" onclick="moveToSlide(0)"></span>
+            <span class="dot" onclick="moveToSlide(1)"></span>
+            <span class="dot" onclick="moveToSlide(2)"></span>
+            <span class="dot" onclick="moveToSlide(3)"></span>
+            <span class="dot" onclick="moveToSlide(4)"></span>
+            <span class="dot" onclick="moveToSlide(5)"></span>
+        </div>
+    </section>
+
+    <!--tour noi bat-->
+    <main class="main-content">
+        <h2 style="font-weight: bold;">Tour nổi bật</h2>
+        <div class="featured-tours">
+           <div class="tour-card">
+                <a style="text-decoration: none; color:black" href="">
+                    <img src="img/lm_241011022814_934439_Chợ nổi 4 miền Pattaya.jpg" alt="Tour 1">
+                <div class="tour-info">
+                    <h4>Tour Miền Tây 4N3Đ</h4>
+                    <p>Trải nghiệm miền Trung tuyệt vời</p>
+                    <p class="price">Từ 3,990,000đ</p>
+                </a>
+                </div>
+            </div>
+            <div class="tour-card">
+                <a style="text-decoration: none; color:black" href="">
+                    <img src="img/lm_241010032144_601253_Phang Nga.jpg" alt="Tour 2">
+                <div class="tour-info">
+                    <h4>Tour Hạ Long - Quảng Ninh 4N3Đ</h4>
+                    <p>Khám phá vịnh Hạ Long</p>
+                    <p class="price">Từ 4,590,000đ</p>
+                </div>
+                </a>
+                </div>
+                 <div class="tour-card">
+                    <a style="text-decoration: none; color:black" href="">
+                        <img src="img/lm_241014111109_609020_ngoc long.jpg" alt="Tour 3">
+                    <div class="tour-info">
+                        <h4>Tour Hà Nội - Sapa 5N4Đ</h4>
+                        <p>Khám phá vẻ đẹp Tây Bắc</p>
+                        <p class="price">Từ 5,290,000đ</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Kham pha san pham-->
+        <div class="container">
+            <h2 style="font-weight: bold;">Khám phá sản phẩm VietTravel</h2>
+            <p>Hãy tận hưởng trải nghiệm du lịch chuyên nghiệp, mang lại cho bạn những khoảnh khắc tuyệt vời và nâng tầm cuộc sống. Chúng tôi cam kết mang đến những chuyến đi đáng nhớ, giúp bạn khám phá thế giới theo cách hoàn hảo nhất.</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="img/bn_240925_KPSP2-tour-mua-thu-nhat.jpg" alt="Đắm say giữa trời thu">
+                    <h3 class="product-title">ĐẮM SAY GIỮA TRỜI THU KHẮP THẾ GIỚI</h3>
+                </div>
+                <div class="product-card">
+                    <img src="img/bn_240911_banner Chau Au_436x327.jpg" alt="Du lịch thẩm thấu">
+                    <h3 class="product-title">DU LỊCH THẨM THẤU TẠI ÚC - MỸ - CANADA</h3>
+                </div>
+                <div class="product-card">
+                    <img src="img/bn_240925_KPSP5-tour-cao-cap.jpg" alt="Tour trải nghiệm cao cấp">
+                    <h3 class="product-title">TOUR TRẢI NGHIỆM CAO CẤP</h3>
+                </div>
+            </div>
+            
+            <div class="navigation">
+                <button class="nav-button">&#9664;</button>
+                <button class="nav-button">&#9654;</button>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    
+    <!--Menu cap 2 cho Diem den-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const destinationsLink = document.getElementById('destinations');
+            const destinationsSubmenu = document.getElementById('destinationsSubmenu');
+            const closeSubmenu = destinationsSubmenu.querySelector('.close-submenu');
+
+            destinationsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                destinationsSubmenu.classList.toggle('active');
+            });
+
+            closeSubmenu.addEventListener('click', function() {
+                destinationsSubmenu.classList.remove('active');
+            });
+
+            // Close submenu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!destinationsSubmenu.contains(e.target) && e.target !== destinationsLink) {
+                    destinationsSubmenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <!--Menu cap 2 cho ☰-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const destinationsLink = document.getElementById('destinations2');
+            const destinationsSubmenu = document.getElementById('destinationsSubmenu2');
+            const closeSubmenu = destinationsSubmenu.querySelector('.close-submenu');
+
+            destinationsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                destinationsSubmenu.classList.toggle('active');
+            });
+
+            closeSubmenu.addEventListener('click', function() {
+                destinationsSubmenu.classList.remove('active');
+            });
+
+            // Close submenu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!destinationsSubmenu.contains(e.target) && e.target !== destinationsLink) {
+                    destinationsSubmenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        var curDate = new Date();
+          
+        // Ngày hiện tại
+        var curDay = curDate.getDate();
+     
+        // Tháng hiện tại
+        var curMonth = curDate.getMonth() + 1;
+          
+        // Năm hiện tại
+        var curYear = curDate.getFullYear();
+     
+        // Gán vào thẻ HTML
+        document.getElementById('current-time').innerHTML = curDay + "/" + curMonth + "/" + curYear;
+    </script>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalSlides = 6;
+        const slideWidth = 430;
+        const slidesToShow = 3; // Hiển thị 3 ảnh cùng lúc
+        const intervalTime = 4000;
+        let autoSlideInterval;
+
+        // Hàm di chuyển slider
+        function moveSlider() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSliderPosition();
+        }
+
+        // Hàm chuyển đến slide chỉ định khi nhấp vào chấm
+        function moveToSlide(index) {
+            currentIndex = index;
+            updateSliderPosition();
+            clearInterval(autoSlideInterval); // Dừng tự động trượt khi người dùng nhấp vào chấm
+            autoSlideInterval = setInterval(moveSlider, intervalTime); // Khởi động lại tự động trượt
+        }
+
+    // Hàm cập nhật vị trí slider và chấm
+        function updateSliderPosition() {
+        // Tính toán vị trí để ảnh đang ở giữa khi đến ảnh cuối
+            let offset = (currentIndex + totalSlides - 1) % totalSlides;
+            slider.style.transform = `translateX(-${offset * slideWidth}px)`;
+
+          // Cập nhật chấm hiển thị
+            dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+    // Khởi động tự động trượt slide
+        autoSlideInterval = setInterval(moveSlider, intervalTime);
+    </script>
+</body>
+</html>

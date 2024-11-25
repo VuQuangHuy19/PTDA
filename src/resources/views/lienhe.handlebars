@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <!-- Tiêu đề -->
+        <div class="text-center mb-4">
+            <h1 class="text-primary">NHẬP HỌ TÊN</h1>
+            <p>Để có thể đáp ứng được các yêu cầu và đóng góp ý kiến của quý khách, xin vui lòng gửi thông tin hoặc gọi đến hotline các chi nhánh bên dưới để liên hệ một cách nhanh chóng</p>
+        </div>
+
+        <div class="row">
+            <!-- Form Thông Tin Liên Lạc -->
+            <div class="col-md-7">
+                <h4 class="mb-3">THÔNG TIN LIÊN LẠC</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="loaiThongTin" class="form-label">Loại thông tin *</label>
+                        <select id="loaiThongTin" class="form-select">
+                            <option selected>Du lịch</option>
+                            <option>Khách sạn</option>
+                            <option>Vận chuyển</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="hoTen" class="form-label">Họ tên *</label>
+                            <input type="text" id="hoTen" class="form-control" placeholder="Nhập họ tên">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Nhập email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="dienThoai" class="form-label">Điện thoại *</label>
+                            <input type="text" id="dienThoai" class="form-control" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="tenCongTy" class="form-label">Tên công ty</label>
+                            <input type="text" id="tenCongTy" class="form-control" placeholder="Nhập tên công ty">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="diaChi" class="form-label">Địa chỉ</label>
+                        <input type="text" id="diaChi" class="form-control" placeholder="Nhập địa chỉ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tieuDe" class="form-label">Tiêu đề *</label>
+                        <input type="text" id="tieuDe" class="form-control" placeholder="Nhập tiêu đề">
+                    </div>
+                    <div class="mb-3">
+                        <label for="noiDung" class="form-label">Nội dung *</label>
+                        <textarea id="noiDung" class="form-control" rows="4" placeholder="Nhập nội dung"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" id="robotCheck" class="form-check-input">
+                        <label for="robotCheck" class="form-check-label">I'm not a robot</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Gửi ngay</button>
+                </form>
+            </div>
+
+            <!-- Mạng Lưới Chi Nhánh -->
+            <div class="col-md-5">
+                <h4 class="mb-3">MẠNG LƯỚI CHI NHÁNH</h4>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-outline-primary">TP.Hồ Chí Minh</button>
+                    <button class="btn btn-outline-primary">Miền Bắc</button>
+                    <button class="btn btn-outline-primary">Miền Trung</button>
+                    <button class="btn btn-outline-primary">Tây Nguyên</button>
+                    <button class="btn btn-outline-primary">Đồng Nam Bộ</button>
+                    <button class="btn btn-outline-primary">Miền Tây</button>
+                    <button class="btn btn-outline-primary">Nước ngoài</button>
+                </div>
+                <div>
+                    <h6>TRỤ SỞ CHÍNH</h6>
+                    <p>190 Pasteur, P. Võ Thị Sáu, Q.3, Tp. Hồ Chí Minh, Việt Nam</p>
+                    <p>Hotline: (84-28) 38 668 999</p>
+                    <p>Fax: (84-28) 38 29 9142</p>
+                    <p>Email: info@vietravel.com</p>
+                </div>
+                <!-- Thêm các chi nhánh khác tương tự -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
