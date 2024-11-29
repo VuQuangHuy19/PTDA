@@ -3,11 +3,12 @@ const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
-
+const { faker } = require('@faker-js/faker');
 const session = require('express-session');
 
 const route = require('./routes')
 const db = require('./config/db');
+const User = require('./app/models/User');
 //connect db  
 db.connect()
 

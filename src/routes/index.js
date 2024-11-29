@@ -5,7 +5,7 @@ const lienheRoute = require('./lienhe');
 function route(app)
 {
     app.use('/', homeRouter);
-    app.use('/auth', authRoute);
+    app.use('/', authRoute);
     app.use('/lienhe', lienheRoute);
 
 }

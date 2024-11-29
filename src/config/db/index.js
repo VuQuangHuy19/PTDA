@@ -1,20 +1,14 @@
 const mongoose = require('mongoose');
 
- async function connect()
-{
+async function connect() {
     try {
+        // Thêm thông báo thành công
         await mongoose.connect('mongodb://localhost:27017/VietTravel');
-        console.log('Connect Successfully!')
+        console.log('Connect Successfully!');
     } catch (error) {
-        console.log('Connect Failure!')   
+        // Thêm thông tin lỗi chi tiết
+        console.log('Connect Failure!', error.message);
     }
 }
 
 module.exports = { connect };
-
-
-
-
-
-   
-

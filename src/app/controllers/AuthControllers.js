@@ -117,7 +117,7 @@ class AuthController {
                 console.error(err);
                 return res.status(500).json({ message: "Logout failed" });
             }
-            res.redirect('auth/login'); // Chuyển hướng về trang đăng nhập
+            res.redirect('login'); // Chuyển hướng về trang đăng nhập
         });
     }
 
