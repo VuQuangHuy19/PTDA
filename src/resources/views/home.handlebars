@@ -7,6 +7,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Travel_Trang_chu.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+        .swiper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: auto; /* hoặc tỉ lệ % */
+    margin-right: 20px; /* Khoảng cách giữa các slide */
+}
+
+.tour-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Đặt kích thước cố định */
+}
+
+.tour-card img {
+    width: 100%;
+    height: auto;
+}
+
+.tour-info {
+    padding: 10px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -16,7 +55,7 @@
     <!--banner-->
     <section class="banner">
         <div class="searchBar">
-            <img style="heigh: 100px;" src="img/banner.webp" alt="Banner" class="img-fluid">
+            <img src="img/sl_241008_KV_THU2024_1915-460px.jpg" alt="Banner" class="img-fluid">
         </div>
     </section>
 
@@ -57,7 +96,7 @@
                 </div>
                 <div class="col">
                     <a href="#"><img src="img/Tiêu chuẩn.webp" alt="Tour 3" class="img-fluid"></a>
-                    <p>Tour Tiêu Chuẩn</p>
+<p>Tour Tiêu Chuẩn</p>
                 </div>
                 <div class="col">
                     <a href="#"><img src="img/Tiết kiệm.webp" alt="Tour 4" class="img-fluid"></a>
@@ -92,38 +131,15 @@
     <!--tour noi bat-->
     <main class="main-content">
         <h2 style="font-weight: bold;">Tour nổi bật</h2>
-        <div class="featured-tours">
-           <div class="tour-card">
-                <a style="text-decoration: none; color:black" href="">
-                    <img src="img/lm_241011022814_934439_Chợ nổi 4 miền Pattaya.jpg" alt="Tour 1">
-                <div class="tour-info">
-                    <h4>Tour Miền Tây 4N3Đ</h4>
-                    <p>Trải nghiệm miền Trung tuyệt vời</p>
-                    <p class="price">Từ 3,990,000đ</p>
-                </a>
-                </div>
-            </div>
-            <div class="tour-card">
-                <a style="text-decoration: none; color:black" href="">
-                    <img src="img/lm_241010032144_601253_Phang Nga.jpg" alt="Tour 2">
-                <div class="tour-info">
-                    <h4>Tour Hạ Long - Quảng Ninh 4N3Đ</h4>
-                    <p>Khám phá vịnh Hạ Long</p>
-                    <p class="price">Từ 4,590,000đ</p>
-                </div>
-                </a>
-                </div>
-                 <div class="tour-card">
-                    <a style="text-decoration: none; color:black" href="">
-                        <img src="img/lm_241014111109_609020_ngoc long.jpg" alt="Tour 3">
-                    <div class="tour-info">
-                        <h4>Tour Hà Nội - Sapa 5N4Đ</h4>
-                        <p>Khám phá vẻ đẹp Tây Bắc</p>
-                        <p class="price">Từ 5,290,000đ</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+<div class="swiper featured-tours-slider">
+    <div class="swiper-wrapper">
+        <!-- Các slide sẽ được thêm động bởi JavaScript -->
+    </div>
+    <!-- Nút điều hướng -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
         <!--Kham pha san pham-->
         <div class="container">
             <h2 style="font-weight: bold;">Khám phá sản phẩm VietTravel</h2>
@@ -138,7 +154,7 @@
                     <img src="img/bn_240911_banner Chau Au_436x327.jpg" alt="Du lịch thẩm thấu">
                     <h3 class="product-title">DU LỊCH THẨM THẤU TẠI ÚC - MỸ - CANADA</h3>
                 </div>
-                <div class="product-card">
+<div class="product-card">
                     <img src="img/bn_240925_KPSP5-tour-cao-cap.jpg" alt="Tour trải nghiệm cao cấp">
                     <h3 class="product-title">TOUR TRẢI NGHIỆM CAO CẤP</h3>
                 </div>
@@ -214,7 +230,7 @@
         var curYear = curDate.getFullYear();
      
         // Gán vào thẻ HTML
-        document.getElementById('current-time').innerHTML = curDay + "/" + curMonth + "/" + curYear;
+document.getElementById('current-time').innerHTML = curDay + "/" + curMonth + "/" + curYear;
     </script>
 
     <script>
@@ -256,5 +272,69 @@
     // Khởi động tự động trượt slide
         autoSlideInterval = setInterval(moveSlider, intervalTime);
     </script>
+    <script>document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const response = await fetch('/api/tours'); // Gọi API để lấy danh sách tours
+        const tours = await response.json();
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+        // Xóa nội dung cũ (nếu có)
+        swiperWrapper.innerHTML = '';
+
+        // Thêm nội dung động vào slider
+        tours.forEach(tour => {
+            swiperWrapper.innerHTML += `
+                <div class="swiper-slide">
+                    <div class="tour-card">
+                        <a style="text-decoration: none; color: black;" href="">
+                            <img src="${tour.img}" alt="${tour.name}">
+                            <div class="tour-info">
+                                <h4>${tour.name}</h4>
+                                <p>${tour.description}</p>
+                                <p class="price">Từ ${tour.price.toLocaleString('vi-VN', {
+                                    style: 'currency',
+                                    currency: 'VND'
+                                })}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Khởi tạo Swiper
+new Swiper('.featured-tours-slider', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    } catch (error) {
+        console.error("Error fetching tours:", error);
+    }
+});
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>
